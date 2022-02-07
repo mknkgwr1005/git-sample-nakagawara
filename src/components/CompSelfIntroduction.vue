@@ -7,7 +7,7 @@
       <div>
         <span>趣味：</span>
         <div v-for="hobby of hobbies" :key="hobby">{{ hobby }}</div>
-        <a href="https://www.rakus-partners.co.jp/">ラクスパートナーズ</a>
+        <a v-bind:href="url">ラクスパートナーズ</a>
         <br />
       </div>
       <div id="image">
@@ -26,6 +26,7 @@ export default class CompSelfIntroduction extends Vue {
   private hobbies = ["読書", "ゲーム", "映画"];
   //   絶対パスで書く publicを現在地として参照している
   private image = "/img/miffy.jpg";
+  private url = "https://www.rakus-partners.co.jp/";
 }
 </script>
 
