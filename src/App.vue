@@ -6,6 +6,7 @@
       <router-link to="/Exam1">Exam1</router-link>|
       <router-link to="/Exam2">Exam2</router-link>|
       <router-link to="/Exam3">Exam3</router-link>|
+      <router-link to="/Exam4">Exam4</router-link>|
     </div>
     <router-view />
   </div>
