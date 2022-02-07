@@ -1,10 +1,17 @@
 <template>
-  <div></div>
+  <div>
+    <CompShowSelfIntro></CompShowSelfIntro>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-@Component
+import CompShowSelfIntro from "@/components/CompShowSelfIntro.vue";
+@Component({
+  components: {
+    CompShowSelfIntro,
+  },
+})
 export default class XXXComponent extends Vue {}
 </script>
 

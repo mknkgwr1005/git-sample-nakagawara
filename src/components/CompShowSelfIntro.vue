@@ -4,14 +4,13 @@
       <div>名前：{{ myName }}</div>
       <div>年齢：{{ age }}</div>
       <div>10年後の年齢：{{ age + 10 }}</div>
-      <div>
-        <span>趣味：</span>
-        <div v-for="hobby of hobbies" :key="hobby">{{ hobby }}</div>
-        <a href="https://www.rakus-partners.co.jp/">ラクスパートナーズ</a>
-        <br />
-      </div>
+      <div>趣味：{{ myHobby }}</div>
+      <a :href="url">ラクスパートナーズ</a>
+      <br />
       <div id="image">
         <img v-bind:src="image" />
+        <br />
+        <button type="button" @click="showElements">ボタン</button>
       </div>
     </div>
   </div>
@@ -20,13 +19,18 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 @Component
-export default class CompSelfIntroduction extends Vue {
-  private myName = "中川原美華";
-  private age = 28;
-  private hobbies = ["読書", "ゲーム", "映画"];
+export default class CompShowSelfIntro extends Vue {
+  private myName = "";
+  private age = 0;
+  private myHobby = "";
   //   絶対パスで書く publicを現在地として参照している
   private image = "/img/miffy.jpg";
+  private url = "https://www.rakus-partners.co.jp/";
+  //   要素を表示
+  // @Emit()
+  // showElements():void{
 }
+// }
 </script>
 
 <style scoped>
