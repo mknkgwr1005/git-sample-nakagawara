@@ -22,7 +22,7 @@ export default class CompAddPrice extends Vue {
   private price1 = 0;
   private price2 = 0;
   private price3 = 0;
-  private TAX = 1.1;
+  private readonly TAX = 1.1;
 
   //   private price1: number = this.num1;
   //   private price2: number = this.num2;
